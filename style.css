@@ -1,0 +1,133 @@
+:root {
+  --fs--title: 2rem;
+  --fs--text: 0.9375rem;
+  --ff--title: "Big Shoulders Display";
+  --ff--text: "Lexend Deca";
+  --clr--section1: hsl(31, 77%, 52%);
+  --clr--section2: hsl(184, 100%, 22%);
+  --clr--section3: hsl(179, 100%, 13%);
+  --clr--text: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  padding: 5.5rem 1.5rem;
+  height: 100vh;
+  min-height: 33rem;
+  background-color: var(--clr--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  max-width: 57.5rem;
+  height: auto;
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-basis: 100%;
+}
+
+.content-card {
+  min-width: 19rem;
+  position: relative;
+  max-height: 31.25rem;
+  min-height: 27.5rem;
+  padding: 2.8125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.content-card-logo {
+  margin-bottom: 2rem;
+}
+
+.content-card-text {
+  font-size: clamp(0.8rem, 0.9375rem, 1rem);
+}
+
+.content-card-text h2 {
+  color: var(--clr--text);
+  font-family: var(--ff--title), sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-card-text p {
+  color: var(--clr--text);
+  font-family: var(--ff--text), sans-serif;
+}
+
+.content-card-button {
+  width: 9.375rem;
+  height: 3.125rem;
+  position: absolute;
+  bottom: 2.8125rem;
+  left: 2.8125rem;
+}
+
+.content-card-button button:hover {
+  cursor: pointer;
+  background-color: #0000;
+  color: var(--clr--text);
+  border: 0.125rem solid hsl(0, 0%, 95%);
+}
+
+.content-card-button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3.125rem;
+  background-color: var(--clr--text);
+  color: #000;
+  mix-blend-mode: screen;
+  font-size: 0.9375rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-style: normal;
+}
+
+.bg-orange {
+  background-color: var(--clr--section1);
+}
+
+.bg-blue {
+  background-color: var(--clr--section2);
+}
+
+.bg-green {
+  background-color: var(--clr--section3);
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    height: auto;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+
+  .content-card {
+    max-height: 31.25rem;
+    min-height: 25.5rem;
+    padding: 2.8125rem;
+  }
+}
